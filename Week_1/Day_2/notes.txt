@@ -1,0 +1,1 @@
+Pure function: return only value and expected only values, should not get globle values too
