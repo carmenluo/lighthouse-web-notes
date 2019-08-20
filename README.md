@@ -5,3 +5,4 @@ Carmen Luo's Notes
 This is note taken by [Carmen Luo](https://github.com/carmenluo) for the [lighthouse bootcamp](https://www.lighthouselabs.ca/)
 * [Week 1](/Week_1)
   * [Day 1](/Week_1/Day_1)
+  * [Day 2](/Week_1/Day_2)
