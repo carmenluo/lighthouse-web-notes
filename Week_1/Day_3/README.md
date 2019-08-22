@@ -1,3 +1,15 @@
+## Primitive types 
+**number**
+**string**
+**boolean**
+**null**
+**undefined**
+**symbol**
+
+## instanceOf VS typeOf [link for reference](https://stackoverflow.com/questions/899574/what-is-the-difference-between-typeof-and-instanceof-and-when-should-one-be-used)
+1. instanceOf won't work on primitive type, it will always return false
+2. typeOf can return primitive type, but for objects, it will just say object. One common bug in JS is null if also return object
+
 ## string notions
 1. Single quote
 2. Double quote
