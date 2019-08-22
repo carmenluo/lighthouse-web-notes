@@ -9,6 +9,12 @@ object and array are passed by reference, everything we change it in subfuctions
 1. Small
 2. Inline
 3. Single purpose
-<br/>*Parameter(if only one paramenter, you can get rid of it) and also the arrow*
+<br/>*Parameter(if only one paramenter, we can use e to indicate it*
 <br/>*return, if only return one statement, it will return implictly without "return"*
+<br/>
+**Higher Order Functions** [tutorial Vedio](https://www.youtube.com/watch?time_continue=595&v=BMUiFMZr7vk)
+<br/>
+1. Function takes callback function is called Higer Order Functions, or *more accurately, functions operate on other functions, that includes but not limited to the ones take call back functions as parameters*<br/>
+2. Functional programming differs from oop is bacause function is also values/objects, that makes our function more composible that we can passing functions around<br/>
+
 
