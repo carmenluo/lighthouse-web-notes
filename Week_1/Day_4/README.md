@@ -17,4 +17,6 @@ object and array are passed by reference, everything we change it in subfuctions
 1. Function takes callback function is called Higer Order Functions, or *more accurately, functions operate on other functions, that includes but not limited to the ones take call back functions as parameters*<br/>
 2. Functional programming differs from oop is bacause function is also values/objects, that makes our function more composible that we can passing functions around<br/>
 
+##### break loops
+Array.phototype.foreach could not break, but for...in and for...of should be fine
 
