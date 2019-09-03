@@ -11,4 +11,5 @@ itself may not be the same (e.g. a resource's state may change between requests)
 
 **302** redirect status code<br/>
 *curl -L* Following 301 and 302 Redirects with Curl<br/>
-*curl -i* Include protocol headers in the output
+*curl -i* Include protocol headers in the output<br/>
+*crul -x* to make post to server
