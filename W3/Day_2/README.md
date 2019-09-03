@@ -22,4 +22,16 @@ for &&, if the first operand is falsey, it is going to return the first one othe
     (in order to read HTTP POST data , we have to use "body-parser" node module. body-parser is a piece of express 
       middleware that reads a form's input and stores it as a javascript object accessible through **req.body**)</li>
   </ul>
+  3. Form
+  <ul>
+    <li>In the form that we want to submit, if we don't submit it with the name, basically we are telling the browser
+    that you don't need to submit</li>
+  </ul>
+</ol>
+
+## COOKIES ##
+<ol>
+  <li>1. Third party cookie: Website store the real cookie for each client in server but only the id of client in client pc</li>
+  <li>2. <b>Tracking Pixels for Retargeting:</b> One website can actually contains bit for other website in cookie. With the bits enabled, the other website embeded these bits can access the cookie they save to our computer earlier.
+  </li>
 </ol>
