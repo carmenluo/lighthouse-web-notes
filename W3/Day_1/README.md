@@ -6,3 +6,5 @@ itself may not be the same (e.g. a resource's state may change between requests)
 **PUT** and **DELETE** are designed to be idempotence<br/>
 
 *body-parse* is a small js library that can help us to convert the body into something that we can work with <br/>
+#### Express
+**res.render()** will render the view with data passed to it, **res.redirect()** will redirect a user to another page (at which point the request starts over)
