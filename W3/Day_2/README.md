@@ -31,7 +31,16 @@ for &&, if the first operand is falsey, it is going to return the first one othe
 
 ## COOKIES ##
 <ol>
-  <li>1. Third party cookie: Website store the real cookie for each client in server but only the id of client in client pc</li>
-  <li>2. <b>Tracking Pixels for Retargeting:</b> One website can actually contains bit for other website in cookie. With the bits enabled, the other website embeded these bits can access the cookie they save to our computer earlier.
+  <li>Third party cookie: Website store the real cookie for each client in server but only the id of client in client pc</li>
+  <li><b>Tracking Pixels for Retargeting:</b> One website can actually contains bit for other website in cookie. With the bits enabled, the other website embeded these bits can access the cookie they save to our computer earlier.
+  </li>
+  <li><b>If statement in EJS</b>
+    typeof username == 'undefined'. this is tricky, I thought if I didn't pass username as parameter, username would be
+    "undefined'. But I get error. It turned out that we need to check type
   </li>
 </ol>
+```
+<%if (typeof username == 'undefined') { %>
+<% } else{ %>  
+<% } %>
+```
