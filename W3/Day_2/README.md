@@ -44,3 +44,5 @@ for &&, if the first operand is falsey, it is going to return the first one othe
 <% } else{ %>  
 <% } %>
 ```
+## GIT BRANCH ## [instruction](https://stackabuse.com/git-merge-branch-into-master/)<br/>
+When we merge, we need to switch back the master to specify what we want to merge
