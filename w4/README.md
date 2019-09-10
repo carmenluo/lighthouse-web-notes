@@ -10,3 +10,6 @@ to itself.
 1. In most case, child wil inherit whatever from parent. However, textarea is an exception because textarea default background is white while most other tags are transparent.
 2. In html, when we load it a stylesheet, it is going to render the the html, so the last style sheet would rewrite the first one.
 3. Each browser has the default user-agent stylesheet. In case to make some standard style, we also have the normalize style for all browser.
+
+#### Event monitor
+1. Can use monitorEvent to monitor all the event
