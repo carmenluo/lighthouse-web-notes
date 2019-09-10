@@ -12,4 +12,4 @@ to itself.
 3. Each browser has the default user-agent stylesheet. In case to make some standard style, we also have the normalize style for all browser.
 
 #### Event monitor
-1. Can use monitorEvent to monitor all the event
+1. Can use monitorEvent to monitor all the event [example](./goJAx.gif)
