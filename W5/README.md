@@ -1,0 +1,63 @@
+## SQL 
+*(<b>A</b>tomicity, <b>C</b>onsistency, <b>I</b>solation, <b>D</b>urability)*
+  - RDBMS
+    - Postseq (Open Source), MariaDB [playground](https://sqlzoo.net/wiki/)
+    - NoSql
+#### CASCADE CONSTRAINTS
+  - ON DELETE CASCADE
+    - when the reference is deleted, the other rows that reference it also get deleted
+```
+ CONSTRAINT fk_column
+     FOREIGN KEY (column1, column2, ... column_n)
+     REFERENCES parent_table (column1, column2, ... column_n)
+     ON DELETE CASCADE
+);
+```
+  - ON UPDATE CASCADE
+    - if the parent primary key is changed, the child value will also change to reflect that. 
+  - NO ACTION
+    - In MySQL, equivalent to RESTRICT. The MySQL Server rejects the delete or update operation 
+      for the parent table if there is a related foreign key value in the referenced table.
+  - RESTRICT 
+    - means that any attempt to delete and/or update the parent will fail throwing an error. 
+      This is the default behaviour in the event that a referential action is not explicitly specified.
+    - When ON UPDATE or ON DELETE is not specified, restrict is always the default
+  - SET NULL
+    - When a parent node get deleted, the child nodes would be set to null
+    
+#### Having and groupby
+Using having and groupby is simply used for summarizing data
+  <b<Syntax</b>
+  ```
+  SELECT statements... GROUP BY column_name1[,column_name2,...] [HAVING condition];
+  ```
+  - "SELECT statements..." is the standard SQL SELECT command query.
+  - "GROUP BY column_name1" is the clause that performs the grouping based on column_name1.
+  - "[,column_name2,...]" is optional; represents other column names when the grouping is done on more than one column.
+  - "[HAVING condition]" is optional; it is used to restrict the rows affected by the GROUP BY clause. It is similar to the  WHERE clause.
+
+  <b>Grouby with multiple columns</b>
+
+  ```
+  SELECT 'category_id','year_released' FROM 'movies' GROUP BY 'category_id','year_released';
+  ```
+
+
+| category_id | year_released |
+| :---:       |     :---:     |
+| NULL        | 2008          |
+| NULL        | 2010          |
+| NULL        | 2012          |
+| 1           | 2011          |
+| 2           | 2008          |
+| 6           | 2007          |
+| 7           | 1920          |
+| 8           | 1920          |
+| 8           | 2005          |
+| 8           | 2007          |
+
+<strong>Category_id = 7 is the unique result that we get from the previous query</strong>
+
+  #### Primary key
+    Try to use index as primary key, otherwise you need to use something long as the foreign key and it is not easy to maintein
+    
