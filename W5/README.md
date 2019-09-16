@@ -58,6 +58,17 @@ Using having and groupby is simply used for summarizing data
 
 <strong>Category_id = 7 is the unique result that we get from the previous query</strong>
 
+```
+SELECT students.name as student, count(assignment_submissions.*) as total_submissions
+FROM assignment_submissions
+JOIN students ON students.id = student_id
+WHERE students.end_date IS NULL
+GROUP BY students.name
+HAVING count(assignment_submissions.*) < 100;
+```
+<b>Having</b> is just like where, while where works for normal data, and having works for aggregated data <b>count(assignment_submissions.*)</b><br>
+*NOTE: The HAVING clause is evaluated before the SELECT so we can't use the alias total_submissions alias that is created in the SELECT*
+
   #### Primary key
     Try to use index as primary key, otherwise you need to use something long as the foreign key and it is not easy to maintein
     
