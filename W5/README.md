@@ -71,6 +71,36 @@ HAVING count(assignment_submissions.*) < 100;
 
   #### Primary key
     Try to use index as primary key, otherwise you need to use something long as the foreign key and it is not easy to maintein
+## Normalization 
+Basically normalization is sacraficing performance to storage, because it will need more complexity to join and find.
+#### 1NF
+- Each column and each row can have one and only one value. You don't want to stack a couple value in one slot
+- No table can contains multiple colums that we could use to get same info, and each row should have a primary key to dstinguished it as unique
+#### 2NF
+- It is in 1NF
+- All non-key attributes are fully functional dependent on the primary key 
+<b>Example</b> 
+
+| customer id | store id | purchase location |
+|-------------|----------|-------------------|
+| 1           | 1        | Richmond st       |
+| 2           | 1        | Richmond st       |
+| 3           | 2        | Lakeshore st      |
+
+In this example, customer id and store id together is the primary. However, the purchase location is only depend on store
+id. So it violate 2NF. The table should be split into:
+
+| store id | purchase location |
+|----------|-------------------|
+| 1        | Richmond st       |
+| 1        | Richmond st       |
+| 2        | Lakeshore st      |
+
+| customer id | store id |
+|-------------|----------|
+| 1           | 1        |
+| 2           | 1        |
+| 3           | 2        |
 #### 3NF
 - First Explanation: 
   - only foreign key columns should be used to reference another table, and no other columns from the parent table should exist in the referenced table (*Think about AuthorNationality is in Book table and Author table*)
@@ -79,8 +109,10 @@ HAVING count(assignment_submissions.*) < 100;
   - It contains only columns that are non-transitively dependent on the primary key.
   *Note: transitively means A rely on B, B rely on C, then A rely on C.*
   ```
-  Consider three columns:  AuthorNationality, Author, and Book.  Column values for AuthorNationality and Author rely 
-  on the Book; once the book is known, you can find out the Author or AuthorNationality.  But also notice that the 
-  AuthorNationality relies upon Author.  That is, once you know the Author, you can determine their nationality. 
-  In this sense then, the AuthorNationality relies upon Book, via Author.  This is a transitive dependence.
+  Consider three columns:  AuthorNationality, Author, and Book.  Column values for 
+  AuthorNationality and Author rely on the Book; once the book is known, you can find out the Author 
+  or AuthorNationality.  But also notice that the AuthorNationality relies upon Author. 
+  That is, once you know the Author,you can determine their nationality. 
+  In this sense then, the AuthorNationality relies upon Book, via Author. 
+  This is a transitive dependence.
   ```
