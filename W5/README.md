@@ -71,4 +71,16 @@ HAVING count(assignment_submissions.*) < 100;
 
   #### Primary key
     Try to use index as primary key, otherwise you need to use something long as the foreign key and it is not easy to maintein
-    
+#### 3NF
+- First Explanation: 
+  - only foreign key columns should be used to reference another table, and no other columns from the parent table should exist in the referenced table (*Think about AuthorNationality is in Book table and Author table*)
+- Second Explanation:
+  - A table is in 2nd normal form.
+  - It contains only columns that are non-transitively dependent on the primary key.
+  *Note: transitively means A rely on B, B rely on C, then A rely on C.*
+  ```
+  Consider three columns:  AuthorNationality, Author, and Book.  Column values for AuthorNationality and Author rely 
+  on the Book; once the book is known, you can find out the Author or AuthorNationality.  But also notice that the 
+  AuthorNationality relies upon Author.  That is, once you know the Author, you can determine their nationality. 
+  In this sense then, the AuthorNationality relies upon Book, via Author.  This is a transitive dependence.
+  ```
