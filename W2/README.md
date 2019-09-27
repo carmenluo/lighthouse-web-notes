@@ -1,4 +1,4 @@
-#### Let and Var
+#### Let and Var and Const
 1. both let and var can be used in globle scope, however var can be easily redifined and let cannot;<br />
 ###### Var
 ```
@@ -18,7 +18,9 @@ console.log(window.varVariable); //this is a var variable
 console.log(window.letVariable); //undefined
 ```
 3. <em><strong>Let</strong> is block scoped</em>: if it is defined inside the scope, you won't be able to see access it outside
-
+<br><em><strong>Const</strong> is also block scoped</em><br>
+<strong>DIFFERENCE: </strong>If we declare const as an array, it cannot be assign to other data type.<br>
+We use <code>const</code> for everything, unless it can be reassigned later, only then do we use <code>let</code>.
  <div style="background-color:rgba(0, 0, 0, 0.0470588); text-align:center; vertical-align: middle; padding:40px 0; margin-top:30px">
 let gives you the privilege to declare variables that are limited in scope to the block, statement of expression unlike var.<br/>
 var is rather a keyword which defines a variable globally regardless of block scope.
