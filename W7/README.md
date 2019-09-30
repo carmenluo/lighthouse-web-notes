@@ -32,3 +32,26 @@ class App extends React.Component {
 }
 ```
 Using framents is basically just like using `<div>`, but it'll behave functionally equivalent to the array-render method.
+
+#### React to return list
+When we use map to return items, compare
+```
+const listItems = props.days.map(day => 
+    <DayListItem
+      name={day.name}
+      spots={day.spots}
+      selected={day.name === props.day}
+      setDay={props.setDay} />
+  );
+```
+```
+const listItems = props.days.map(day => {
+return
+    <DayListItem
+      name={day.name}
+      spots={day.spots}
+      selected={day.name === props.day}
+      setDay={props.setDay} />
+  });
+```
+if use curly bracket for the arrow function, you need to return otherwise it is going to be undefined.
