@@ -107,3 +107,6 @@ Five steps to do that:
 
  <li>Delete the remaining empty function declaration.</li>
 </ul>
+#### useEffect
+useEffect is also hooks, if we don't pass into dependencies, it will re-render every single time the components get changed, which means our website would be reloading basicailly all the time. Because we have the side effect from fetch.
+dependency array: nothing means everytime, empty means once, data means only when this data change.
