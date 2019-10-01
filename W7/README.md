@@ -54,11 +54,12 @@ return
       setDay={props.setDay} />
   });
 ```
-if use curly bracket for the arrow function, you need to return otherwise it is going to be undefined.
+if use curly bracket for the arrow function, you need to return otherwise it is going to be undefined.<br>
 
 #### Example of encapsulating and reusing Components
+Before
 ```
-`function Clock(props) {
+function Clock(props) {
   return (
     <div>
       <h1>Hello, world!</h1>
@@ -73,22 +74,11 @@ function tick() {
   );
 }
 
-setInterval(tick, 1000);`
+setInterval(tick, 1000);
 ```
-Five steps to do that:
-<ul>
- <li>Create an ES6 class, with the same name, that extends React.Component. </li>
-
- <li>Add a single empty method to it called render().</li>
-
- <li>Move the body of the function into the render() method.</li>
-
- <li>Replace props with this.props in the render() body.</li>
-
- <li>Delete the remaining empty function declaration.</li>
- </ul>
- ```
- `function tick(){
+After:
+```
+function tick(){
   ReactDOM.render(
   <Clock date={new Date()} />,
     document.getElementById('root'))
@@ -103,5 +93,17 @@ class Clock extends React.Component {
     </div>
   );
   }
-}`
+}
 ```
+Five steps to do that:
+<ul>
+ <li>Create an ES6 class, with the same name, that extends React.Component. </li>
+
+ <li>Add a single empty method to it called render().</li>
+
+ <li>Move the body of the function into the render() method.</li>
+
+ <li>Replace props with this.props in the render() body.</li>
+
+ <li>Delete the remaining empty function declaration.</li>
+</ul>
