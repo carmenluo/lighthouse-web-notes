@@ -110,10 +110,12 @@ Five steps to do that:
 #### useEffect
 useEffect is also hooks, if we don't pass into dependencies, it will re-render every single time the components get changed, which means our website would be reloading basicailly all the time. Because we have the side effect from fetch.
 dependency array: nothing means everytime, empty means once, data means only when this data change.
+We would need to clean timer after we fire the effect because we don't want our application always keep track of the timers in the background. Simply by returning a function clearInterval would do the work.
+
+![effect functions sequence](https://github.com/carmenluo/lighthouse-web-notes/blob/master/W7/9eb2f427-ba3d-4cfa-8705-33e2568edad0.png)
 
 #### Props and State [toturial](https://codeburst.io/props-and-state-in-react-native-explained-in-simple-english-8ea73b1d224e)
 <ol>
  <li>Props and state are two types of data that controls a component: <b>Props</b> is immutable because props are from their parent. In React, data flows in one direction: Parent to children. It can help us to create reusable code . See tutorial</li>
  <li><b>State</b>: State is internal to a componnet so that we can use it to keep track of data. Always use setState to update the state objects</li>
-
 </ol>
