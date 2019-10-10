@@ -12,4 +12,5 @@ employeeName = "Steve Ferg"
 The above code is illegle in statically type
 Dynamically typed and weakly typed language can provide flexibility for developer, but for strongly typed and statically we 
 are expected to check the type at compile time so that it can have better performance
+Ruby is strongly typed, so "4.0" / 2 is illeagal. we need to convert it to int first with "4.0".to_i
 
