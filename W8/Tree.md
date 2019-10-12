@@ -19,3 +19,12 @@ Open a webpage, what we see in the browser might not be something that we can re
 </body>
 </html>
 ```
+![Figure1](https://github.com/carmenluo/lighthouse-web-notes/blob/master/W8/htmltree.png)
+Figure 1: Tree representation of HTML
+The <code><html></code> element is the parent, the <code><body></code> is a child, and the <code><h1></code> element is a child of the <code><body></code> element. All these nested tags would become much more clear when we represent them in these hierarchy style. 
+
+#### DATABASE
+Tree is also commonly seen in DATABASE design.
+Let's take another look at the official Durian org chart:
+
+
