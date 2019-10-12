@@ -35,3 +35,15 @@ What if I want to know the total number of employees in all departments under Cr
       <li> children points to the next node in the list
 </ul>
 
+##### Tree
+<ul>
+      <li> root: the top level node of a tree
+      <li> search: find the specific node in the tree
+      <li> add: insert another node in the tree
+      <li> removoe: delete the node from the tree
+</ul>
+
+We can imagine that our app might need to deal with a lot of BST operations (e.g., search, max, min, insert, delete.. etc). It takes O(h) time where h is the height fo the BST. It makes sense when the sturctures are kinda balanced so that we don't need to worry too mcuh about the worst case. But what if we have a extremely large dataset with one branch is way larger than the others? 
+That's why we have Balanced BST like Red-Black Trees that ensure we have a better performance for these operations of O(logN) time.
+
+### Red-Black Tress
