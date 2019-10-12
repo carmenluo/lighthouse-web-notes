@@ -59,3 +59,5 @@ That's why we have Balanced BST like Red-Black Trees that ensure we have a bette
 A simple example to understand balancing is, a chain of 3 nodes is not possible in the Red-Black tree. We can try any combination of colours and see all of them violate Red-Black tree property.
 ![example](https://github.com/carmenluo/lighthouse-web-notes/blob/master/W8/Screenshot%20from%202019-10-12%2012-33-29.png) <br>
 
+##### Conclusion 
+Trees simulate hierarchical data. Whenever you think you need this type of hierarchy, such as web deveplopment or company structure, consider using a tree!
