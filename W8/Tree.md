@@ -46,4 +46,16 @@ What if I want to know the total number of employees in all departments under Cr
 We can imagine that our app might need to deal with a lot of BST operations (e.g., search, max, min, insert, delete.. etc). It takes O(h) time where h is the height fo the BST. It makes sense when the sturctures are kinda balanced so that we don't need to worry too mcuh about the worst case. But what if we have a extremely large dataset with one branch is way larger than the others? 
 That's why we have Balanced BST like Red-Black Trees that ensure we have a better performance for these operations of O(logN) time.
 
-### Red-Black Tress
+### Red-Black Tree
+<strong> Rules </strong>
+<ul>
+      <li> Each node is either red or black
+      <li> Root node is always black
+      <li> if a node is red, then its child node must be black
+      <li> There are no two adjacent red nodes (A red node cannot have a red parent or red child).
+</ul>
+
+<strong> How does Red-Black Tree remains balance</strong>
+A simple example to understand balancing is, a chain of 3 nodes is not possible in the Red-Black tree. We can try any combination of colours and see all of them violate Red-Black tree property.
+![example](https://github.com/carmenluo/lighthouse-web-notes/blob/master/W8/Screenshot%20from%202019-10-12%2012-33-29.png) <br>
+
