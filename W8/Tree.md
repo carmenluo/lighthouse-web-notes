@@ -28,12 +28,14 @@ Tree is also commonly seen in DATABASE design.
 Let's take another look at the official Durian org chart:
 ![chart](https://github.com/carmenluo/lighthouse-web-notes/blob/master/W8/boaN2Sy.png) <br>
 What if I want to know the total number of employees in all departments under Craig? That's when tree comes in handy. We can represent every person as a node.<br>
+
 ##### Node
 <ul>
  <li> data stores a value
  <li> parent point to a node's parent
  <li> children point to the next node in the list
 </ul>
+
 ##### Tree
 <ul>
  <li> root: the top-level node of a tree
@@ -43,7 +45,8 @@ What if I want to know the total number of employees in all departments under Cr
 </ul>
 We can imagine that our app might need to deal with a lot of BST operations (e.g., search, max, min, insert, delete.. etc). It takes O(h) time where h is the height fo the BST. It makes sense when the structures are kinda balanced so that we don't need to worry too much about the worst case. But what if we have an extremely large dataset with one branch is way larger than the others? 
 That's why we have Balanced BST like Red-Black Trees that ensure we have a better performance for these operations of O(logN) time.
-### Red-Black Tree
+
+#### Red-Black Tree
 <strong> Rules </strong>
 <ul>
  <li> Each node is either red or black
@@ -54,5 +57,6 @@ That's why we have Balanced BST like Red-Black Trees that ensure we have a bette
 <strong> How does Red-Black Tree remains balance</strong>
 A simple example to understand balancing is, a chain of 3 nodes is not possible in the Red-Black tree. We can try any combination of colors and see all of them violate Red-Black tree property.
 ![example](https://github.com/carmenluo/lighthouse-web-notes/blob/master/W8/Screenshot%20from%202019-10-12%2012-33-29.png) <br>
+
 ##### Conclusion 
 Trees simulate hierarchical data. Whenever you think you need this type of hierarchy, such as web development or company structure, consider using a tree!
